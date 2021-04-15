@@ -1,19 +1,16 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :update, :destroy]
 
-  # GET /albums
   def index
     @reviews = Review.all
 
     render json: @reviews
   end
 
-  # GET /albums/1
   def show
     render json: @review
   end
 
-  # POST /albums
   def create
     @review = Review.new(review_params)
 
@@ -24,7 +21,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /albums/1
   def update
     if @review.update(review_params)
       render json: @review
@@ -33,7 +29,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # DELETE /albums/1
   def destroy
     @review.destroy
   end
