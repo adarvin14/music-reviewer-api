@@ -1,51 +1,51 @@
-class AlbumsController < ApplicationController
-  before_action :set_album, only: [:show, :update, :destroy]
+class ReviewsController < ApplicationController
+  before_action :set_review, only: [:show, :update, :destroy]
 
   # GET /albums
   def index
-    @albums = Album.all
+    @reviews = Review.all
 
-    render json: @albums
+    render json: @reviews
   end
 
   # GET /albums/1
   def show
-    render json: @album
+    render json: @review
   end
 
   # POST /albums
   def create
-    @album = Album.new(album_params)
+    @review = Review.new(review_params)
 
-    if @album.save
-      render json: @album, status: :created, location: @album
+    if @review.save
+      render json: @review, status: :created, location: @review
     else
-      render json: @album.errors, status: :unprocessable_entity
+      render json: @review.errors, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /albums/1
   def update
-    if @album.update(album_params)
-      render json: @album
+    if @review.update(review_params)
+      render json: @review
     else
-      render json: @album.errors, status: :unprocessable_entity
+      render json: @review.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /albums/1
   def destroy
-    @album.destroy
+    @review.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_album
-      @album = Album.find(params[:id])
+    def set_review
+      @review = Review.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
-    def album_params
-      params.require(:album).permit(:artist, :review)
+    def review_params
+      params.require(:review).permit(:artist, :album, :content)
     end
 end

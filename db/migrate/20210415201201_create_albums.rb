@@ -1,8 +1,9 @@
 class CreateAlbums < ActiveRecord::Migration[6.1]
   def change
-    create_table :albums do |t|
+    create_table :reviews do |t|
       t.text :artist
-      t.text :review
+      t.text :album
+      t.text :content
 
       t.timestamps
     end
