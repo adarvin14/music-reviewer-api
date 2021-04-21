@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Review.create(artist: "artist 1", album: "album 1", content: "content 1")
-Review.create(artist: "artist 2", album: "album 2", content: "content 2")
-Review.create(artist: "artist 3", album: "album 3", content: "content 3")
-Review.create(artist: "artist 4", album: "album 4", content: "content 4")
+Album.create(title: "title 1", artist: "artist 1", release_year: "2020" )
+Review.create(album_id: 1, content: "content 1" )
+# Review.create(artist: "artist 2", album: "album 2", content: "content 2")
+# Review.create(artist: "artist 3", album: "album 3", content: "content 3")
+# Review.create(artist: "artist 4", album: "album 4", content: "content 4")

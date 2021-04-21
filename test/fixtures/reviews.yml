@@ -1,11 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyText
-  artist: MyText
-  release_year: 1
+  album_id: 1
+  content: MyText
 
 two:
-  title: MyText
-  artist: MyText
-  release_year: 1
+  album_id: 1
+  content: MyText
