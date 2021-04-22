@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   def index
     @reviews = Review.all
 
-    render json: @reviews
+    render json: @reviews.as_json
   end
 
   # GET /reviews/1
